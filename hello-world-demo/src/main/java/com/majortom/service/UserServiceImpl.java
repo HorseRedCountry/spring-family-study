@@ -17,16 +17,19 @@ public class UserServiceImpl {
 
     private UserDaoImpl userDao;
 
+    public UserServiceImpl() {
+    }
+
     public UserServiceImpl(UserDaoImpl userDao) {
         this.userDao = userDao;
     }
 
-    public List<User> findUserList(){
+    public List<User> findUserList() {
         return this.userDao.findUserList();
     }
 
-    public void setUserDao(UserDaoImpl userDao){
-        this.userDao=userDao;
+    public void setUserDao(UserDaoImpl userDao) {
+        this.userDao = userDao;
     }
 
 }
