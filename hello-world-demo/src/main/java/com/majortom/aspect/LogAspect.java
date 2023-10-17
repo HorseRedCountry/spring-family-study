@@ -4,6 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Repository;
 
 import java.lang.reflect.Method;
 
@@ -16,6 +17,7 @@ import java.lang.reflect.Method;
  * @date 2023/10/13 15:14
  **/
 @Aspect
+@Repository
 public class LogAspect {
     @Around("execution(* com.majortom.service.*.*(..))")
     public Object businessService(ProceedingJoinPoint pjp) throws Throwable {

@@ -21,8 +21,9 @@ public class Main {
 //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("aspects.xml",
 //                "daos.xml", "services.xml");
 //        UserServiceImpl userService = context.getBean("userService", UserServiceImpl.class);
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeansConfig.class);
-        UserServiceImpl userService = context.getBean("userService", UserServiceImpl.class);
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeansConfig.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com.majortom");
+        UserServiceImpl userService = context.getBean(UserServiceImpl.class);
         List<User> userList = userService.findUserList();
         userList.forEach(user -> System.out.println(user.getName() + ": " + user.getAge()));
     }

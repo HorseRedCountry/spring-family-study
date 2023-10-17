@@ -2,6 +2,8 @@ package com.majortom.service;
 
 import com.majortom.dao.UserDaoImpl;
 import com.majortom.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,23 +15,15 @@ import java.util.List;
  * @author Major Tom
  * @date 2023/10/13 15:04
  **/
+@Service
 public class UserServiceImpl {
 
+    @Autowired
     private UserDaoImpl userDao;
 
-    public UserServiceImpl() {
-    }
-
-    public UserServiceImpl(UserDaoImpl userDao) {
-        this.userDao = userDao;
-    }
-
     public List<User> findUserList() {
-        return this.userDao.findUserList();
+        return userDao.findUserList();
     }
 
-    public void setUserDao(UserDaoImpl userDao) {
-        this.userDao = userDao;
-    }
 
 }
