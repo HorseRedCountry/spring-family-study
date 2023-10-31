@@ -1,10 +1,8 @@
 package com.majortom;
 
-import com.majortom.config.BeansConfig;
 import com.majortom.entity.User;
 import com.majortom.service.UserServiceImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
